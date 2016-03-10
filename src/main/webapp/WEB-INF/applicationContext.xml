@@ -33,4 +33,12 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
 
+    <bean id="userMgr" class="com.gyw.mgr.user.UserMgrImpl">
+        <property name="userDao" ref="userDao" />
+    </bean>
+
+    <bean id="userDao" class="com.gyw.dao.user.UserDaoImpl">
+        <!--<property name="sessionFactory" ref="cloudssSessionFactory" />-->
+    </bean>
+
 </beans>
