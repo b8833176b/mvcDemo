@@ -1,8 +1,17 @@
 package com.gyw.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tbl_book")
 public class Book {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "author")
     private String author;
     public Book(){}
     public Book(int id, String name, String author) {

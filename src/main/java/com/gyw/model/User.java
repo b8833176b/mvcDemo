@@ -1,11 +1,20 @@
 package com.gyw.model;
 
+import javax.persistence.*;
+
 /**
  * Created by Administrator on 2016/3/9.
  */
+@Entity
+@Table(name = "tbl_user")
 public class User {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "password")
     private String password;
     public User(){}
     public User(int id, String name, String password) {

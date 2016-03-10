@@ -11,15 +11,76 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.version>4.1.1.RELEASE</spring.version>
-    <junitversion>4.11</junitversion>
+    <hibernate.version>4.2.5.Final</hibernate.version>
+    <junit.version>4.11</junit.version>
+    <log4j.version>1.2.17</log4j.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>${junitversion}</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
+    </dependency>
+
+    <!-- 日志文件管理包 -->
+    <!-- log start -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
+    <!-- mysql驱动包 -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.29</version>
+    </dependency>
+
+    <!-- hibernate4 -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>4.2.5.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-ehcache</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.0-api</artifactId>
+      <version>1.0.1.Final</version>
+    </dependency>
+    <!--<dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>-->
+
+    <!-- c3p0-->
+    <dependency>
+      <groupId>c3p0</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-c3p0</artifactId>
+      <version>4.1.7.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>c3p0</groupId>
+      <artifactId>c3p0-oracle-thin-extras</artifactId>
+      <version>0.9.0.2</version>
     </dependency>
 
     <!-- spring begin -->
@@ -56,6 +117,12 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
       <version>${spring.version}</version>
     </dependency>
     <!-- spring end -->
