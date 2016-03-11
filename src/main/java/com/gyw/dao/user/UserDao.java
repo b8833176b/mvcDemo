@@ -2,11 +2,13 @@ package com.gyw.dao.user;
 
 import com.gyw.model.User;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/3/9.
  */
 public interface UserDao {
-    public void queryAll();
+    public List<User> queryAll();
 
     public void addUser(User user);
 

@@ -3,6 +3,8 @@ package com.gyw.mgr.user;
 import com.gyw.dao.user.UserDao;
 import com.gyw.model.User;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/3/9.
  */
@@ -18,8 +20,8 @@ public class UserMgrImpl implements UserMgr {
         this.userDao = userDao;
     }
 
-    public void queryAll(){
-     userDao.queryAll();
+    public List<User> queryAll(){
+     return userDao.queryAll();
     }
 
     public void addUser(User user){
