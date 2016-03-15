@@ -6,18 +6,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>欢迎</title>
+    <title>upload</title>
 </head>
 <body>
 <h2>Hello World!</h2>
-
-<form action="login">
-    <%--<spring:message code="username" />--%>
-    <input id="username" name="username" type="text" /><br/>
-    <%--<spring:message code="password" />--%>
-    <input id="password" name="password" type="password" /><br/>
-    <input type="submit" />
-</form>
+<spring:message code="username" />
 <span>当前IP：<%=request.getRemoteAddr() %></span>
 </body>
 </html>

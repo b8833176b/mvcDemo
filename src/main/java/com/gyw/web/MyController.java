@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.support.RequestContext;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -22,8 +24,13 @@ public class MyController {
     @RequestMapping("login") //用来处理前台的login请求
     private @ResponseBody String hello(
             @RequestParam(value = "username", required = false)String username,
-            @RequestParam(value = "password", required = false)String password
+            @RequestParam(value = "password", required = false)String password,
+            HttpServletRequest request
     ){
+        RequestContext requestContext = new RequestContext(request);
+        String ii=requestContext.getMessage("username");
+        System.out.println("###########################################");
+        System.out.println(ii);
         List<User> users = userMgr.queryAll();
         String name="";
        if(users!=null&&users.size()>0){
@@ -34,7 +41,7 @@ public class MyController {
            }
        }
 
-        return name+"Hello "+username+",Your password is: "+password;
+        return "login1";
 
     }
 

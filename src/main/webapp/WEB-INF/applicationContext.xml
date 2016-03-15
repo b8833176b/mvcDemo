@@ -97,6 +97,11 @@
         </property>
     </bean>
 
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource" >
+        <property name="basename" value="mess" />
+        <property name="useCodeAsDefaultMessage" value="true" />
+    </bean>
+
     <bean id="userMgr" class="com.gyw.mgr.user.UserMgrImpl">
         <property name="userDao" ref="userDao" />
     </bean>
